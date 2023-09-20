@@ -9,7 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HelloSelenium {
 	
-	static String url = "https://demo.testfire.net/";
+	//static String url = "https://demo.testfire.net/";
+	static String url = "https://coffeemanga.io/";
+	
 	static long waitTime = 20;
 	static String user = "jsmith";
 	static String password = "Demo1234";
@@ -26,30 +28,30 @@ public class HelloSelenium {
 		// assert
 		System.out.println(driver.getTitle());
 		
-		WebElement signInLink = driver.findElement(By.id("LoginLink"));
-		signInLink.click();
+		//WebElement signInLink = driver.findElement(By.id("LoginLink"));
+		//signInLink.click();
 		
 		//find the login form
 		//WebElement loginForm = driver.findElement(By.id("login"));
 		//System.out.println(loginForm.getTagName());
 	
 		// find the login form
-		WebElement loginForm = driver.findElement(By.id("login"));
-		System.out.println(loginForm.getTagName());
+		//WebElement loginForm = driver.findElement(By.id("login"));
+		//System.out.println(loginForm.getTagName());
 		
 		
 		// type in the user/pass
-		driver.findElement(By.id("uid")).sendKeys(user);
-		driver.findElement(By.id("passw")).sendKeys(password);
-		driver.findElement(By.name("btnSubmit")).click();
+		//driver.findElement(By.id("uid")).sendKeys(user);
+		//driver.findElement(By.id("passw")).sendKeys(password);
+		//driver.findElement(By.name("btnSubmit")).click();
 		
 		
 		
 		//view account summary
-		WebElement menuLink = driver.findElement(By.id("listAccounts"));
-		System.out.println(menuLink.getTagName());
-		menuLink.click();
-		menuLink.findElement(By.xpath("//option[. = '800003 Checking']")).click();
+		//WebElement menuLink = driver.findElement(By.id("listAccounts"));
+		//System.out.println(menuLink.getTagName());
+		//menuLink.click();
+		//menuLink.findElement(By.xpath("//option[. = '800003 Checking']")).click();
 		
 		
 		//account summary
@@ -59,8 +61,8 @@ public class HelloSelenium {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTime));
 		
 		// should be on the Hello {User} page
-		WebElement signOutLink = driver.findElement(By.id("LoginLink"));
-		System.out.println(signOutLink.getText());
+		//WebElement signOutLink = driver.findElement(By.id("LoginLink"));
+		//System.out.println(signOutLink.getText());
 		
 		
 		
